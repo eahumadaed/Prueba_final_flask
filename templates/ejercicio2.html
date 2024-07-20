@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio de sesión{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+    <h2>Inicio de sesión</h2>
+    <form action="{{ url_for('ejercicio2') }}" method="post">
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Ingresa tu nombre</label>
+            <input type="text" class="form-control" id="usuario" name="usuario" required>
+        </div>
+        <div class="mb-3">
+            <label for="contraseña" class="form-label">Ingresa tu contraseña</label>
+            <input type="password" class="form-control" id="contraseña" name="contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    {% if resultado %}
+    <div class="mt-4">
+        <h3>Resultado</h3>
+        <p>{{ resultado }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

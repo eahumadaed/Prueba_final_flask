@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center mt-5">
+    <p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('ejercicio1') }}" role="button" style="background-color: #c500ff; height: 136px;justify-content: center;width: 136px; padding-top: 50px;">Ejercicio 1</a>
+        <a class="btn btn-secondary btn-lg" href="{{ url_for('ejercicio2') }}" role="button" style="background-color: #11c911; height: 136px; justify-content: center;width: 136px;padding-top: 50px;">Ejercicio 2</a>
+    </p>
+</div>
+{% endblock %}
